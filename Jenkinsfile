@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { 'master' }
   stages {
     stage('Checkout') { steps { checkout scm } }
     stage('Unit test') {
