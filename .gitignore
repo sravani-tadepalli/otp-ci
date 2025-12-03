@@ -1,0 +1,10 @@
+# Terraform local state & sensitive files
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+infra/plan.tfplan
+infra/.terraform/
+infra/*.tfvars
+infra/*.tfvars.json
+# Editor files
+*.swp
+*.DS_Store
