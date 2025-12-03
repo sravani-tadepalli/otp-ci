@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    ARTIFACT_BUCKET = "otp-lambda-artifacts-me-us-east-1"
+  }
   stages {
     stage('Checkout') { steps { checkout scm } }
     stage('Unit test') {
