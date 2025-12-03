@@ -1,9 +1,9 @@
 pipeline {
-  agent { label 'master' }
+  agent any
   stages {
     stage('Checkout') { steps { checkout scm } }
     stage('Unit test') {
-      agent { label 'master' }
+      agent any
       steps {
         sh 'python3 --version || true'
         dir('lambda_generate') { sh 'python3 -m pip install -r requirements.txt -q || true'; sh 'pytest -q || true' }
